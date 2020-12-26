@@ -6,6 +6,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.travel.advisor.databinding.ListingItemBinding
 import com.travel.advisor.model.Listing
+import com.travel.advisor.ui.details.ListingDetailsActivity
 
 /**
  * Adapter for [listings][Listing]
@@ -16,7 +17,9 @@ class ListingAdapter(private val listings: List<Listing>) : RecyclerView.Adapter
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) = with(parent) {
         val binding = ListingItemBinding.inflate(LayoutInflater.from(context), this, false)
-        ListingViewHolder(binding) {}
+        ListingViewHolder(binding) {
+            context.startActivity(ListingDetailsActivity.createIntent(context, it))
+        }
     }
 
     override fun onBindViewHolder(holder: ListingViewHolder, position: Int) = holder.bind(listings[position])
