@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">TopAdvisor</string>
+
+    <string name="area_municipality">%1$s - %2$s</string>
+    <string name="stars_format">%.1f ⭐</string>
+    <plurals name="reviews_format">
+        <item quantity="one">%d review</item>
+        <item quantity="other">%d reviews</item>
+    </plurals>
+</resources>
