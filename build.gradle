@@ -29,6 +29,8 @@ ext {
     androidxVersion = '1.1.0'
     materialDesignVersion = '1.2.1'
     constraintLayoutVersion = '2.0.4'
+    moshiVersion = '1.11.0'
+    glideVersion = '4.7.1'
 
     //test dependencies
     junitVersion = '4.13'
