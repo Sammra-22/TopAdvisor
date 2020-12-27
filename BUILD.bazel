@@ -1,0 +1,21 @@
+load("@rules_jvm_external//:defs.bzl", "artifact")
+load("//:rules.bzl", "java_library", "java_plugin")
+
+package(default_visibility = ["//visibility:public"])
+
+java_library(
+    name = "moshi_kotlin",
+    exported_plugins = [":moshi_kotlin_codegen_plugin"],
+    exports = [
+        artifact("com.squareup.moshi:moshi-kotlin"),
+    ],
+)
+
+java_plugin(
+    name = "moshi_kotlin_codegen_plugin",
+    generates_api = True,
+    processor_class = "com.squareup.moshi.kotlin.codegen.JsonClassCodegenProcessor",
+    deps = [
+        artifact("com.squareup.moshi:moshi-kotlin-codegen"),
+    ],
+)
