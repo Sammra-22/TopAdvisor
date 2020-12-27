@@ -49,8 +49,9 @@ class ListingsActivity : BaseActivity() {
                             this@ListingsActivity,
                             DividerItemDecoration.VERTICAL
                     ))
-                }
+                } else Unit
             }
+            else -> Unit
         }
     }
 }

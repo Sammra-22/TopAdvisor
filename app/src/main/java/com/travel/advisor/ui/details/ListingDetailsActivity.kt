@@ -51,9 +51,9 @@ class ListingDetailsActivity : BaseActivity() {
                                     .into(image)
                         }
                     }
-                }
-
+                } else Unit
             }
+            else -> Unit
         }
     }
 
